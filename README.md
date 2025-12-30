@@ -1,45 +1,57 @@
 # tmn-todo-rypq
 
-> **Status**: 🎨 DESIGNING
-
-## 概要
-
-ユーザーがタスクを管理できるシンプルなTodoアプリケーション。タスクの追加、編集、削除、完了状態の切り替えが可能です。
+シンプルで使いやすいTodoアプリケーションです。Next.js 14とTailwind CSSを使用して構築されています。
 
 ## 機能
 
-- [ ] タスク追加
-- [ ] タスク編集
-- [ ] タスク削除
-- [ ] タスク完了トグル
-- [ ] タスク一覧表示
+- ✅ タスクの追加
+- ✏️ タスクの編集
+- 🗑️ タスクの削除
+- ✔️ タスクの完了状態切り替え
+- 📋 タスク一覧表示
+- 💾 ブラウザローカルストレージでのデータ永続化
 
-## 画面
+## 技術スタック
 
-| パス | 画面名 | 説明 |
-|------|--------|------|
-| `/` | Todo一覧ページ | すべてのTodoタスクを表示し、新規タスクの追加、既存タスクの編集や削除ができるメインページ |
+- **Framework**: Next.js 14 (App Router)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS + shadcn/ui
+- **State Management**: React useState
+- **Data Persistence**: localStorage
+- **Icons**: Lucide React
 
-## データ
+## セットアップ
 
-### Todo
+1. 依存関係をインストール:
+```bash
+npm install
+```
 
-| フィールド | 型 | 説明 |
-|-----------|-----|------|
-| id | string | タスクの一意の識別子 |
-| title | string | タスクのタイトル |
-| completed | boolean | タスクの完了状態 |
-| createdAt | string | タスク作成日時 |
+2. 開発サーバーを起動:
+```bash
+npm run dev
+```
 
-## 認証
+3. ブラウザで http://localhost:3000 を開く
 
-なし
+## ビルド
 
----
+```bash
+npm run build
+npm start
+```
 
-## Tech Stack
+## 使い方
 
-- Framework: Next.js 14 (App Router)
-- Styling: Tailwind CSS + shadcn/ui
-- Database: localStorage (ブラウザストレージ)
-- Hosting: Vercel
+1. **タスクの追加**: 上部の入力フィールドに新しいタスクを入力して「追加」ボタンをクリック
+2. **タスクの完了**: チェックボックスをクリックしてタスクを完了状態に
+3. **タスクの編集**: 鉛筆アイコンをクリックして編集モードに入り、テキストを修正
+4. **タスクの削除**: ごみ箱アイコンをクリックしてタスクを削除
+
+## データの保存
+
+すべてのタスクはブラウザのlocalStorageに自動的に保存されます。ページを更新してもデータは保持されます。
+
+## ライセンス
+
+MIT
